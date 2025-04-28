@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container_1{
+        display: grid;
+        justify-content: center;
+        width: 24%;
+        height: 100vh;
+        box-shadow: 0px 0px 10px rgb(62, 60, 60);
+    }
+    .container_1 > button{
+        padding: 10px;
+        height: 7vh;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    .staff_management{
+        display: none;
+        grid-template-columns: repeat(3,1fr);
+        gap: 50px;
+        justify-content: center;
+        align-content: center;
+        margin-top: -800px;
+        margin-left: 400px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgb(62, 60, 60);
+        width: 50%,auto;
+        height: 70vh;
+    }
+    .staff_management > button{
+        padding: 40px;
+        font-size: 30px;
+        width: 100%;
+    }
+</style>
+<body>
+    <aside>
+        <div class="container_1">
+            <button>Staff Management</button>
+            <button>Inventory Management</button>
+            <button>Menu Management</button>
+            <button>Customer Feedback</button>
+            <button>Logout</button>
+        </div>
+    </aside>
+
+    <div class="staff_management">
+        <button>Staff Account</button>
+        <button>Staff Personal Info</button>
+        <button>Scheduling</button>
+    </div>
+</body>
+</html>

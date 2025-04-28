@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking.css">
+    <title>Booking</title>
+</head>
+<style>
+    #Name{
+        margin-top: 30px;
+    }
+    #select_table{
+        margin-bottom: 30px;
+        margin-top: -30px;
+    }
+</style>
+<body>
+    <main class="main_CLASS">
+        <div class="Container_Input">
+            <h1 class="h1BOOKING">BOOKING</h1>
+            <input type="text" placeholder="Name" id="Name">
+            <input type="gmail" placeholder="Gmail" id="gmail">
+            <input type="number"  id="contactNo" placeholder="Contact No">
+            <label for="date">Select Date</label>
+            <input type="date" id="Date">
+            <label for="time">Select Time</label>
+            <select name="time" id="Time">
+                <option value="12-2pm">12-2pm</option>
+                <option value="3-5pm">3-5pm</option>
+                <option value="7-9pm">7-9pm</option>
+                <option value="10-12pm">10-12pm</option>
+            </select>
+
+            <label for="people">No. of people</label>
+            <select name="people" id="peoples">
+                <option value="1 Person">1 Person</option>
+                <option value="2 Person">2 Person</option>
+                <option value="3 Person">3 Person</option>
+                <option value="4 Person">4 Person</option>
+                <option value="5 Person">5 Person</option>
+                <option value="6 Person">6 Person</option>
+                <option value="7 Person">7 Person</option>
+                <option value="8 Person">8 Person</option>
+                <option value="9 Person">9 Person</option>
+                <option value="10 Person">10 Person</option>
+            </select>
+
+            <label for="table" id="STABLES">Select Table</label><br>
+                    <select name="selecttable" id="select_table">
+                        <option value="Table 1">Table 1</option>
+                        <option value="Table 2">Table 2</option>
+                        <option value="Table 3">Table 3</option>
+                        <option value="Table 4">Table 4</option>
+                        <option value="Table 5">Table 5</option>
+                        <option value="Table 6">Table 6</option>
+                        <option value="Table 7">Table 7</option>
+                        <option value="Table 8">Table 8</option>
+                        <option value="Table 9">Table 9</option>
+                        <option value="Table 10">Table 10</option>
+                    </select>
+             <button class="book_now" id="BOOK_Now">BOOK NOW</button>       
+        </div>
+    </main>
+</body>
+</html>
+<script src="script.js"></script>

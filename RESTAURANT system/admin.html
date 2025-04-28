@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin</title>
+</head>
+<style>
+  #CustomerAccounts{
+    margin-top: -130vh;
+  }
+  #StaffAcc{
+    margin-top: 30px;
+  }
+  #password{
+    margin-bottom: 20px;
+  }
+  #staff_Address{
+    margin-left: 220px;
+  }
+  .search-container {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 237px;
+    width: 86%;
+}
+#searchInput {
+    width: 80%;
+    padding: 10px; 
+    border: 2px solid #a6a4a4; 
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+</style>
+<body>
+    <header class="headerMain">
+      <i class="fas fa-user-shield"></i>
+      <h1>Welcome, Admin!</h1>
+    </header>
+    <aside>
+        <div class="container_1">
+            <button class="staff_accounts" onclick="handleButtonClick(this, showAccounts)" id="StaffAcc">
+              <i class="fa fa-users"></i> Staff Accounts
+            </button>
+            <button class="staff_info" onclick="handleButtonClick(this, showStaffInfo)" id="StaffInfo">
+              <i class="fa fa-user-circle"></i> Staff Personal Info
+            </button>
+            <button class="scheduling" onclick="handleButtonClick(this, showScheduling)" id="Schedule">
+              <i class="fa fa-calendar-alt"></i> Scheduling
+            </button>
+          <button class="customer_feedback" onclick="handleButtonClick(this, showCustomerFeedback)" id="CustomerFeedback">
+            <i class="fas fa-comments"></i> Customer Feedback
+        </button>
+        <button class="order_list" onclick="handleButtonClick(this, showOrderList)" id="OrderList">
+          <i class="fas fa-clipboard-list"></i> Order List
+        </button>
+        <button class="booked_list" onclick="handleButtonClick(this, showBookedList)" id="BookedList">
+          <i class="fas fa-calendar-check"></i> Booked List
+        </button>
+            <button class="logout" onclick="handleButtonClick(this, showLogout)" id="Logout">
+                <i class="uil uil-signout"></i> Logout
+            </button>
+            <button class="customer_accounts" onclick="handleButtonClick(this, showCustomerAccounts)" id="CustomerAccounts">
+                <i class="fas fa-user"></i> Customer Accounts
+            </button>
+            
+            
+        </div>
+    </aside>
+
+    <div id="customerAccounts" class="customerAccounts">
+      <table class="customerAccounts_table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Gmail</th>
+            <th>Password</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="table_content2">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div id="staffAccounts" class="staffAccounts">
+        <table class="staffAccount_table">
+            <thead>
+                <tr>
+                    <th class="td_rows">ID</th>
+                    <th class="th_name">Full Name</th>
+                    <th class="th_gmail">Gmail</th>
+                    <th class="th_password">Password</th>
+                    <th class="th_action">Action</th>
+                </tr>
+               
+            </thead>
+            <tbody id="table_content1">
+
+            </tbody>
+        </table>
+<!-- STAFF ACCOUNTS -->
+        <div class="add_acc">
+          <p>Add Account</p>
+          <label for="name">Full Name</label>
+          <input type="text" placeholder="Full Name" id="Fname" required>
+
+          <label for="email">Gmail</label>
+          <input type="email" placeholder="Gmail" id="email" required>
+
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" id="password" required>
+          <button class="addACC_btn" id="ADD" >Add</button>
+          <button class="clear_btn" id="CLEAR" onclick="Clear()">Clear</button>
+        </div>
+    </div>
+
+    <div id="staffInfo" class="staffInfo">
+        <div class="staffInfo_form">
+          <h2>Add Staff Member</h2>
+          <form>
+            <label for="staffFirstName">First Name:</label>
+            <input type="text" placeholder="First Name" id="staffInfo_firstname" required>
+            
+            <label for="staffLastName">Last Name:</label>
+            <input type="text" placeholder="Last Name" id="staffInfo_lastname" required>
+  
+            <label for="staffEmail">Email:</label>
+            <input type="email" placeholder="Email" id="staffInfo_email" required>
+            <br>
+            <label for="staffAddress" id="staff_Address">Address:</label>
+            <input type="text" placeholder="Address" id="staffInfo_address" required>
+  
+            <label for="staffContactno">Contact No:</label>
+            <input type="number" placeholder="Contact No" id="staffInfo_contactno" required>
+            <br>
+            <button id="btnAddStaff" class="btnAddStaff">Add Staff</button>
+
+          </form>
+        </div>
+
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search for names..." onkeyup="searchStaff()">
+        </div>
+
+        <table class="staffInfo_table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Contact No</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="staffInfo_table">
+
+          </tbody>
+        </table>
+    </div>
+
+    <div id="Scheduling" class="Scheduling">
+        <form id="scheduleForm" class="scheduleForm">
+            <label for="staffName" class="staffName">Staff Name:</label>
+            <input type="text" id="staffName" placeholder="Enter Staff Name" required>
+
+            <label for="scheduleDate">Date:</label>
+            <input type="date" id="scheduleDate" required>
+
+            <label for="scheduleTime">Time:</label>
+            <input type="time" id="scheduleTime" required>
+
+            <label for="taskDetails">Task Details:</label>
+            <textarea id="taskDetails" placeholder="Enter Task Details" required></textarea>
+
+            <button class="btnAddSchedule" id="addSchedule">Add Schedule</button>
+        </form>
+
+        <table id="scheduleTable" class="scheduleTable">
+          <thead>
+              <tr>
+                  <th>Staff Name</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Task Details</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody id="scheduleTableBody">
+              
+          </tbody>
+      </table>
+    </div>
+
+    <div id="orderList" class="orderList">
+      <table class="orderList_table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer Email</th>
+            <th>Order Details</th>
+            <th>Order Date/Time</th>
+            <th>Total Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="orderList_content">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div id="customerFeedback" class="customerFeedback">
+      <table class="customerFeedback_table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Gmail</th>
+            <th>Feedback</th>
+          </tr>
+        </thead>
+        <tbody id="customerFeedback_content">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div id="bookedList" class="bookedList">
+      <table class="bookedList_table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gmail</th>
+            <th>Contact No</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>No of people</th>
+            <th>Table</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="bookedList_content">
+
+        </tbody>
+      </table>
+    </div>
+
+    
+</body>
+</html>
+<script src="script.js"></script>
+<script>
+    function showLogout(){
+      if(confirm('Are you sure you want to Logout?')){
+        window.location = 'frontpage.html';
+      }else{
+        return;
+      }
+    }
+
+    function handleButtonClick(button, func) {
+    if (button.classList.contains('active')) {
+        button.classList.remove('active');
+    } else {
+        const buttons = document.querySelectorAll('.container_1 > button');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        button.classList.add('active');
+    }
+    func();
+}
+
+function searchStaff() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const table = document.getElementById("staffInfo_table");
+    const rows = table.getElementsByTagName("tr");
+
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let found = false;
+
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j]) {
+                const cellValue = cells[j].textContent || cells[j].innerText;
+                if (cellValue.toLowerCase().indexOf(filter) > -1) {
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (found) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none"; 
+        }
+    }
+}
+</script>

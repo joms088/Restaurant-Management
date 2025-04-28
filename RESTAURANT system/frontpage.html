@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontpage.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurant Management System</title>
+</head>
+<body>
+    <!--Navigator Menu-->
+    <nav class="navbar">
+        <ul>
+            <h2 class="h2DF">BYTE BITES</h2>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About Us</a>
+            <a href="#contact" class="CONTACT">Contact</a>
+            <button class="Blogin" id="form_open">
+                <i class="fa fa-sign-in-alt"></i> Login
+            </button>
+        </ul>
+    </nav>
+
+    <!--MAIN INTRO PAGE-->
+    <main id="home" class="Main_Class">
+        <div class="MAin_INTRO">
+            <h2>Welcome to BYTE BITES</h2>
+            <h1 class="h11">Flavors Inspired by</h1>
+            <h1 class="h12">the Seasons</h1>
+            <p>Come with family & feel the joy of mouthwatering food</p>
+        </div>
+        <button id="booking" class="BOOK_NOW">BOOK NOW</button>
+
+        <!-- Login form -->
+        <div class="form_container">
+            <i class="uil uil-times form_close"></i>
+            
+            <div class="form login_form">
+                <form action="#">
+                    <h2>Login</h2>
+
+                    <div class="input_box">
+                        <input type="email" name="loginemail" placeholder="Enter your email" id="login_email" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" name="password" placeholder="Enter your password" id="login_password" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide" id="togglePassword"></i>
+                    </div>
+
+                    <div class="option_field">
+                        
+                        
+                    </div>
+
+                    <button class="button_Login" id="login">Login Now</button>
+
+                    <div class="login_signup">
+                        Don't have an account? <a href="#" id="signup_link">Signup</a>
+                    </div>
+                </form>
+            </div> 
+
+            <!-- Signup Form -->
+            <div class="form signup_form">
+                <form action="#">
+                    <h2>Signup</h2>
+
+                    <div class="input_box">
+                        <input type="email" name="signupemail" placeholder="Enter your email" id="signup_email" required>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" name="password" placeholder="Create password" id="signup_password" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide" id="toggleSignupPassword"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" name="confirm_password" placeholder="Confirm password" id="signup_Cpassword" required>
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide" id="toggleConfirmPassword"></i>
+                    </div>
+
+                    <button class="button_Signup" id="signup">Signup Now</button>
+
+                    <div class="login_signup">
+                        Already have an account? <a href="#" id="login_link">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!--MENU SECTION PAGE-->
+    <section id="menu" class="Menu">
+        <h1>OUR MENU</h1>
+        <div class="IMG_CONTAINER_MENU">
+            <div class="img1" >
+                <img src="images/sisig.jpg" alt="Sisig" class="IMAGE_1">
+                <h2 class="h2DINNER_MENU">Dinner</h2>
+                <button id="button_DINNER" class="button_DINNER_MENU">VIEW MENU</button>
+            </div>
+            <div class="img2">
+                <img src="images/halohalo.jpg" alt="HaloHalo" class="IMAGE_2">
+                <h2 class="h2DESSERT_MENU">Dessert</h2>
+                <button id="button_DESSERT" class="button_DESSERT_MENU">VIEW MENU</button>
+            </div>
+            <div class="img3" >
+                <img src="images/lemonjuice.jpg" alt="LemonJuice" class="IMAGE_3">
+                <h2 class="h2DRINKS_MENU">Drinks</h2>
+                <button id="button_DRINKS" class="button_DRINKS_MENU">VIEW MENU</button>
+            </div>
+        </div>
+    </section>
+
+    <!--ABOUT US SECTION PAGE-->
+    <section id="about" class="ABOUT_US">
+        <h1 class="h1ABOUT_US">ABOUT US</h1>
+        <p class="pABOUT_US">
+            Lorem ipsum dolor sit amet, illum definitiones no quo
+            maluisset concludaturque et eum, altera fabulas ut quo.
+            Affert laboramus repudiandae nec et.
+        </p>
+        <div>
+            <div class="ABOUT_US_img1"><img src="images/BGABOUTUS.jpg" alt=""></div>
+            
+        </div>
+        
+    </section>
+
+    <!--CONTACT MAIN PAGE-->
+    <footer id="contact" class="LAST">
+        <div class="container_1">
+            <h1 class="h1_CU">GeT In Touch</h1>
+            <p class="p1_CU">
+            Lorem ipsum dolor sit amet, illum definitiones no quo
+            maluisset concludaturque et eum, altera fabulas ut quo.
+            Affert laboramus repudiandae nec et.
+            </p>
+            <h2 class="h21_CU">Phone Number</h2>
+            <p class="p2_CU">+123-456-789</p>
+            <h2 class="h22_CU">E-Mail</h2>
+            <p class="p3_CU">dineflow@gmail.com</p>
+        </div>
+        <div class="container_2">
+            <h1 class="h1_2CU">Send a Message</h1>
+            <input type="text" placeholder="Full Name" id="CU_Fname" class="CU_i1">
+            <input type="gmail" placeholder="Gmail" class="CU_i2" id="CU_gmail">
+            <textarea class="CU_text1" id="CU_message" placeholder="Message" rows="3"></textarea>
+            <button class="CU_Submit" id="Submit">Submit</button>
+        </div>
+    </footer>
+
+    <!---->
+</body>
+<script src="script.js"></script>
+</html>
+<script>
+    let booking = document.getElementById("booking");
+    booking.addEventListener("click",function(event){
+        event.preventDefault();
+        window.location = 'booking.html';
+    });
+
+
+
+document.querySelectorAll('.nav_menu a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+let button_DRINKS = document.getElementById("button_DRINKS");
+let button_DESSERT = document.getElementById("button_DESSERT");
+let button_DINNER = document.getElementById("button_DINNER");
+
+button_DRINKS.addEventListener("click",function(){
+    window.location = 'drinks.html';
+});
+button_DESSERT.addEventListener("click",function(){
+    window.location = 'dessert.html';
+});
+button_DINNER.addEventListener("click",function(){
+    window.location = 'dinner.html';
+});
+</script>
+

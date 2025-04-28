@@ -1,0 +1,537 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* HEADER */
+.headerMain{
+    padding: 32px;
+    box-shadow: 0px 0px 10px rgb(62, 60, 60);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-family: arial, sans-serif;
+}
+.headerMain i{
+    font-size: 28px;
+    color: rgb(130, 6, 207);
+}
+.headerMain h1{
+    margin-left: -670px;
+}
+
+.h1_admin{
+    text-align: center;
+
+}
+button i {
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle;
+}
+.container_1{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+    width: 15%;
+    height: 100vh,auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 15px rgb(62, 60, 60);
+}
+.container_1 > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    font-size: 15px;
+    padding: 10px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+}
+.container_1 > button:hover{
+    background-color: orange;
+    transition: 0.2s;
+}
+.container_1 > button.active {
+    background-color: orange;
+}
+.logout{
+    margin-top: 495px;
+}
+
+/* FOR CONTAINER POPUP */
+.customerAccounts{
+    display: none;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50vh;
+    border: 1px solid #6e6969;
+    margin-top: -63%;
+    margin-left: 30%;
+    overflow-y: auto;
+}
+.customerAccounts_table{
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    height: 50vh;
+    
+    
+}
+.customerAccounts_table th{
+    background-color: rgb(26, 25, 25);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.customerAccounts_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.customerAccounts_table tbody{
+    text-align: center;
+}
+
+.staffAccounts{
+    display: none;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50vh;
+    border: 1px solid #6e6969;
+    margin-top: -62%;
+    margin-left: 18%;
+    overflow-y: auto;
+}
+.staffAccount_table{
+    padding: 0;
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    height: 50vh;
+}
+.staffAccount_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.staffAccount_table th{
+    background-color: rgb(34, 33, 33);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.td_rows tr:nth-child(even) {
+    background-color: #dddddd;
+}
+td{
+    padding: 0;
+    gap: 250px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.th_name,.th_gmail,.th_password{
+    font-size: 16px;
+    
+}
+.add_acc{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    width: 28%;
+    margin-top: 155px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    box-shadow: 0px 5px 15px rgb(62, 60, 60);
+}
+.add_acc > p{
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+.add_acc > label{
+    margin-left: 31px;
+    font-family: arial, sans-serif;
+}
+.add_acc > input{
+    padding: 10px;
+    width: 80%;
+    margin-left: 30px;
+    font-size: 18px;
+}
+.addACC_btn{
+    width: 30%;
+    padding: 10px;
+    margin-left: 75px;
+    font-size: 16px;
+    background-color: orange;
+    border: none;
+    font-family: arial, sans-serif;
+}
+.clear_btn{
+    width: 30%;
+    padding: 10px;
+    margin-left: 54%;
+    margin-top: -57.9px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    background-color: orange;
+    border: none;
+    font-family: arial, sans-serif;
+}
+.add_acc > button:hover{
+    background-color: rgb(189, 123, 2);
+}
+.staffInfo{
+    display: none;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 70vh;
+    border: 1px solid #6e6969;
+    margin-top: -40%;
+    margin-left: 25%;
+    overflow-y: auto;
+}
+.staffInfo_table{
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0;
+    height: 70vh;
+}
+.staffInfo_table th{
+    background-color: rgb(26, 25, 25);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.staffInfo_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/*staff info form */
+.staffInfo_form{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: -30%;
+    width: 75%; 
+    height: 40vh;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: arial, sans-serif;
+    margin-right: 60px;
+}
+.staffInfo_form label{
+    margin-left: 60px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+.staffInfo_form input{
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.btnAddStaff{
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    margin-left: 40%;
+    width: 15%;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btnAddStaff:hover{
+    background-color: rgb(1, 1, 74);
+}
+.Scheduling{
+    display: none;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 90vh;
+    margin: 0;
+    margin-top: -62%;
+    margin-left: 25%;
+}
+.scheduleForm{
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 75%; 
+    height: 50vh;
+}
+.btnAddSchedule{
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btnAddSchedule:hover{
+    background-color: rgb(3, 3, 113);
+}
+.scheduleForm label{
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.scheduleForm input,
+.scheduleForm textarea{
+    width: 96%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.scheduleTable {
+    margin-top: 48%;
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0;
+    height: 50vh;
+}
+.scheduleTable th,
+.scheduleTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.scheduleTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.customerFeedback{
+    display: none;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #6e6969;
+    margin-left: 25%;
+    margin-top: -62%;
+    width: 70%;
+    height: 50vh;
+    overflow-y: auto;
+}
+.customerFeedback_table{
+    padding: 0;
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    height: 50vh;
+}
+.customerFeedback_table th{
+    background-color: rgb(48, 46, 46);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.customerFeedback_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.orderList{
+    display: none;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #6e6969;
+    margin-left: 25%;
+    margin-top: -65%;
+    width: 70%;
+    height: 70vh;
+    overflow-y: auto;
+}
+.orderList_table{
+    padding: 0;
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    height: 70vh;
+}
+.orderList_table th{
+    background-color: rgb(48, 46, 46);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.orderList_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.bookedList{
+    display: none;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #6e6969;
+    margin-left: 25%;
+    margin-top: -65%;
+    width: 70%;
+    height: 70vh;
+    overflow-y: auto;
+}
+.bookedList_table{
+    padding: 0;
+    max-width: 100%;
+    background-color: white;
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    height: 70vh;
+}
+.bookedList_table th{
+    background-color: rgb(48, 46, 46);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.bookedList_table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.edit-btn, .delete-btn,.view-btn{
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.edit-btn{
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+}
+.delete-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+}
+.edit-btn:hover{
+    background-color: rgb(0, 0, 135);
+}
+.delete-btn:hover{
+    background-color: rgb(128, 0, 0);
+}
+
+.delete-staffAcc-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.delete-staffAcc-btn:hover{
+    background-color: rgb(128, 0, 0);
+}
+.delete-order-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.delete-order-btn:hover{
+    background-color: rgb(128, 0, 0);
+}
+.delete-customerAcc-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.delete-customerAcc-btn:hover{
+    background-color: rgb(128, 0, 0);
+}
+.delete-staffInfo-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.delete-staffInfo-btn:hover{
+    background-color: rgb(128, 0, 0);
+}
+.delete-booked-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.delete-booked-btn:hover{
+    background-color: rgb(128, 0, 0);
+}
+.delete-schedule-btn{
+    background-color: rgb(248, 8, 8);
+    color: white;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+}
+.delete-schedule-btn:hover{
+    background-color: rgb(128, 0, 0);
+}

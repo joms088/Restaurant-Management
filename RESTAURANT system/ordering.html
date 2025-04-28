@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering</title>
+    <link rel="stylesheet" href="ordering.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #logout{
+        width: 10vh;
+        padding: 10px;
+        float: right;
+        margin-top: -60px;
+        font-size: 13px;
+        border-radius: 15px;
+        background-color: rgb(4, 183, 4);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    #logout:hover{
+        background-color: rgb(3, 88, 3);
+    }
+</style>
+<body>
+
+   <aside>
+    <div class="left_container">
+
+    </div>
+   </aside>
+
+   <div class="btn_container">
+    <h1>Menu List</h1>
+    <button class="btn_mainDish">
+        <i class="fas fa-utensils"></i> Main Dish
+    </button>
+    <button class="btn_drinks">
+        <i class="fas fa-glass-martini-alt"></i> Drinks
+    </button>
+    <button class="btn_dessert">
+        <i class="fas fa-ice-cream"></i> Dessert
+    </button>
+</div>
+
+
+    <div class="menu_container">
+
+    <div class="food-card" id="item1" data-category="maindish">
+        <img src="maindish/BEEF BULALO.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+            <h3 class="food-name">Beef Bulalo</h3>
+            <p class="food-description">A savory Filipino beef marrow stew with vegetables like corn and cabbage.</p>
+            <button class="food-price">₱300</button>   
+            <button class="add-to-order">Add to Order</button>
+    </div>
+
+   
+        <div class="food-card" id="item2" data-category="maindish">
+            <img src="maindish/BOK CHOY WITH SHRIMP.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Bok Choy with Shrimp</h3>
+                <p class="food-description">A light and healthy dish combining fresh bok choy and plump shrimp in a flavorful sauce.</p>
+                <button class="food-price">₱400</button>   
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+            <div class="food-card" id="item3" data-category="maindish">
+                <img src="maindish/CHIKEN INASAL.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                    <h3 class="food-name">Chicken Inasal</h3>
+                    <p class="food-description">Grilled chicken marinated in a mixture of calamansi, soy sauce, and spices.</p>
+                    <button class="food-price">₱350</button>  
+                    <button class="add-to-order">Add to Order</button> 
+            </div>
+
+            
+                <div class="food-card" id="item4" data-category="maindish">
+                    <img src="maindish/CRISPY PATA.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                        <h3 class="food-name">Crispy Pata</h3>
+                        <p class="food-description">Deep-fried pork knuckle with a crispy skin and tender meat, served with a tangy dipping sauce.</p>
+                        <button class="food-price">₱550</button> 
+                        <button class="add-to-order">Add to Order</button>  
+                </div>
+                    <div class="food-card" id="item5" data-category="maindish">
+                        <img src="maindish/LECHON.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                            <h3 class="food-name">Lechon</h3>
+                            <p class="food-description">A Filipino-style roasted pig with crunchy skin and juicy meat, often the centerpiece of celebrations.</p>
+                            <button class="food-price">₱680</button> 
+                            <button class="add-to-order">Add to Order</button>                      
+                    </div>
+                    <div class="food-card" id="item6" data-category="maindish">
+                        <img src="maindish/PORK ADOBO.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                            <h3 class="food-name">Pork Adobo</h3>
+                            <p class="food-description">A classic Filipino dish braised in soy sauce, vinegar, garlic, and spices.</p>
+                            <button class="food-price">₱289</button>  
+                            <button class="add-to-order">Add to Order</button>                     
+                    </div>
+
+        <div class="food-card" id="item7" data-category="drinks">
+            <img src="drinks/BREW COFFEE.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Brew Coffee</h3>
+                <p class="food-description">Freshly brewed coffee for a rich, aromatic experience.</p>
+                <button class="food-price">₱150</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+        <div class="food-card" id="item8" data-category="drinks">
+            <img src="drinks/CALAMANSI JUICE.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Calamansi Juice</h3>
+                <p class="food-description">Bright, tangy, and utterly refreshing, calamansi juice is a citrus lover's dream in a glass.</p>
+                <button class="food-price">₱50</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+        <div class="food-card" id="item9" data-category="drinks">
+            <img src="drinks/COLA.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Cola</h3>
+                <p class="food-description">Carbonated soft drinks in various flavors.</p>
+                <button class="food-price">₱65</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+        <div class="food-card" id="item10" data-category="drinks">
+            <img src="drinks/ICED TEA.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Iced Tea</h3>
+                <p class="food-description">Refreshing tea served cold, often with a hint of lemon or sweetener.</p>
+                <button class="food-price">₱55</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+        <div class="food-card" id="item11" data-category="drinks">
+            <img src="drinks/TEA.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Tea</h3>
+                <p class="food-description">Hot or cold brewed tea with calming flavors.</p>
+                <button class="food-price">₱55</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+        <div class="food-card" id="item12" data-category="drinks">
+            <img src="drinks/WATER.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Water</h3>
+                <p class="food-description">Pure and refreshing hydration.</p>
+                <button class="food-price">₱30</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        <div class="food-card" id="item13" data-category="drinks">
+            <img src="drinks/WINE.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Wine</h3>
+                <p class="food-description">A variety of red or white wines to complement your meal.</p>
+                <button class="food-price">₱169</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+
+        <div class="food-card" id="item14" data-category="dessert">
+            <img src="dessert/AVOCADO SHAKE.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Avocado Shake</h3>
+                <p class="food-description">Creamy, luscious, and naturally sweet, this avocado shake is a velvety delight in every sip.</p>
+                <button class="food-price">₱120</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        <div class="food-card" id="item15" data-category="dessert">
+            <img src="dessert/BUKO PANDAN.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Buko Pandan</h3>
+                <p class="food-description">A sweet coconut dessert with pandan flavor, cream, and jelly.</p>
+                <button class="food-price">₱150</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        <div class="food-card" id="item16" data-category="dessert">
+            <img src="dessert/HALO-HALO.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Halo-Halo</h3>
+                <p class="food-description">A vibrant mix of shaved ice, sweetened beans, fruits, leche flan, and ice cream.</p>
+                <button class="food-price">₱150</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        <div class="food-card" id="item17" data-category="dessert">
+            <img src="dessert/LECHE FLAN.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Leche Flan</h3>
+                <p class="food-description">A creamy caramel custard dessert.</p>
+                <button class="food-price">₱120</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        <div class="food-card" id="item18" data-category="dessert">
+            <img src="dessert/MANGO SHAKE.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Mango Shake</h3>
+                <p class="food-description">A refreshing and sweet mango smoothie.</p>
+                <button class="food-price">₱120</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        <div class="food-card" id="item19" data-category="dessert">
+            <img src="dessert/UBE ICECREAM.jpg" alt="Food Image" class="food-image" alt="Delicious Burger">
+                <h3 class="food-name">Ube Icecream</h3>
+                <p class="food-description">Purple yam-flavored ice cream, creamy and vibrant.</p>
+                <button class="food-price">₱110</button>
+                <button class="add-to-order">Add to Order</button>
+        </div>
+        
+</div>
+
+    <aside>
+    <div class="right_container">
+        <div class="total_container">
+            <h1>table</h1>
+            <button id="logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+            <h2 class="total_line">Total Amount</h2>
+            <button class="btn_payorder" id="payOrderButton">
+                <i class="fas fa-credit-card"></i> Pay Order
+            </button>
+        </div>
+        
+    </div>
+   </aside>
+   
+
+
+<script src="script.js"></script>
+</body>
+</html>
+<script>
+    let logout = document.getElementById("logout");
+
+    logout.addEventListener("click",function(){
+        if(confirm("Are you sure you want to Logout?")){
+            window.location = 'frontpage.html';
+        }else{
+            return;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded",function(){
+    const Foodcard =
+    document.querySelectorAll(".food-card");
+
+    Foodcard.forEach(item => {
+        item.addEventListener("click",function(){
+            Foodcard.forEach(i => i.classList.remove("selected"));
+            this.classList.add("selected");
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".btn_container button");
+    const foodCards = document.querySelectorAll(".food-card");
+    let lastClickedCategory = null; 
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const category = this.classList[0].split("_")[1].toLowerCase();
+
+            if (lastClickedCategory === category) {
+                foodCards.forEach(card => {
+                    card.style.display = "block";
+                });
+                lastClickedCategory = null; 
+            } else {
+                foodCards.forEach(card => {
+                    if (card.dataset.category === category) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none"; 
+                    }
+                });
+                lastClickedCategory = category; 
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentUserEmail = localStorage.getItem("currentUserEmail");
+    const bookings = JSON.parse(localStorage.getItem("userBooking")) || [];
+    
+    const userBooking = bookings.find(booking => booking.gmail === currentUserEmail);
+
+    if (userBooking) {
+        const tableElement = document.querySelector(".total_container h1");
+        if (tableElement) {
+            tableElement.textContent = `${userBooking.select_table}`;
+        }
+    } else {
+        console.log("No booking found for this user.");
+    }
+});
+
+</script>

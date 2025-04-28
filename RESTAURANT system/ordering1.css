@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    font-family: Arial, sans-serif;
+    height: 100%;
+    
+}
+
+button{
+    cursor: pointer;
+}
+.header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 30px;
+    box-shadow: 0px 10px 15px rgb(62, 60, 60);
+
+}
+.header > button{
+    width: 20%;
+    margin-left: 70vh;
+}
+.category_btn{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 50%;
+    height: 20vh;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    margin-left: 75vh;
+    margin-top: -100vh;  
+}
+.btn1,.btn2,.btn3{
+    height: 9vh;
+    width: 20vh;
+}
+.container_right{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 45vh;
+    height: 100vh;
+    box-shadow: 0px 10px 15px rgb(62, 60, 60);
+    margin: 0;
+    overflow-y: auto;
+}
+.container_right h2{
+    margin-top: 80vh;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.container_right button{
+    padding: 20px;
+    width: 80%;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    margin-left: 30px;
+    background-color: rgb(16, 118, 16);
+    cursor: pointer;
+}
+.container_right button:hover{
+    background-color: rgb(1, 70, 1);
+}
+.section_images{
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    margin-left: 50vh;
+}
+img{
+    width: 25vh;
+}
+.menu_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+.food-card{
+    align-items: grid;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 15px;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.food-card:hover {
+    transform: scale(1.05);
+}
+.food-name{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.food-description{
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.food-price{
+    font-size: 1.2em;
+    color: #E91E63;
+    font-weight: bold;
+}

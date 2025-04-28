@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Popins", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*NAVBAR MENU*/
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    max-width: 100%;
+    background-color: rgba(28, 24, 24, 0.8);
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.navbar a{
+    text-decoration: none;
+    max-width: 100%;
+    padding: 30px;
+    margin-top: 100px;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.navbar a:hover{
+    border-bottom: 2px solid white;
+    color: orange;
+    transition: .4s;
+}
+ul{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.h2DF{
+    color: white;
+    float: left;
+    margin-left: -480px;
+
+}
+.Blogin{
+    float: right;
+    margin-left: auto;
+    margin-right: -500px;
+    margin-top: -10px;
+    padding: 10px;
+    width: 80px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.Blogin:hover{
+    background-color: rgb(73, 48, 2);
+}
+/*MAIN PAGE INTRO*/
+.MAin_INTRO{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100% 100% 100%;
+}
+.MAin_INTRO h2{
+    color: orange;
+    margin-bottom: -50px;
+    margin-top: 150px;
+}
+.MAin_INTRO h1,p{
+    color: white;
+}
+.MAin_INTRO h1{
+    padding: 10px;
+    font-size: 70px;
+}
+.h11{
+    margin-top: -90px;
+    margin-bottom: -210px;
+}
+.h12{
+    margin-top: -30px;
+    margin-bottom: -50px;
+}
+.BOOK_NOW{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 400px;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.BOOK_NOW:hover{
+    background-color: orange;
+    color: black;
+    transition: 0.5s;
+}
+.Main_Class{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+                url(background_website/vastu-tips-for-restaurant\ \(1\)_0_1200.jpg) no-repeat;
+
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}   
+/*MAIN PAIN LOGIN FORM SECTION*/
+.form_container{
+    position: fixed;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    display: none;
+
+    transition: all 0.4s ease-out;
+}
+.section_home.show .form_container{
+
+    transform: translate(-50%, -50%) scale(1);
+}
+.signup_form{
+    display: none;
+    
+}
+.form_close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #0b0217;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.form_container h2{
+    font-size: 22px;
+    color: #0b0217;
+    text-align: center;
+}
+.input_box{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+.input_box input{
+    height: 100%;
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus{
+    border-color: #7d2ae8;
+}
+.input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.input_box i.email,
+.input_box i.password{
+    left: 0;
+    color: #707070;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password{
+    color: #7d2ae8;
+}
+.input_box i.pw_hide{
+    right: 0;
+    font-size: 18px;
+    transform: translateY(-50%);
+    color: #707070;
+    cursor: pointer;
+}
+.option_field{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+.form_container a{
+    color: #7d2ae8;
+    font-size: 12px;
+    text-decoration: none;
+}
+.form_container a:hover{
+    text-decoration: underline;
+}
+.checkbox{
+    cursor: pointer;
+    display: flex;
+    column-gap: 8px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.checkbox input{
+    accent-color: #7d2ae8;
+}
+.checkbox label{
+    cursor: pointer;
+    font-size: 12px;
+    color: black;
+}
+.form_container .button_Login,.button_Signup{
+    border-radius: 5px;
+    border-color: orange;
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px 0;
+}
+.login_signup {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+.button_Login,.button_Signup{
+    cursor: pointer;
+}
+.button_Login:hover,.button_Signup:hover{
+    background-color: rgb(156, 102, 1);
+}
+
+/*MENU SECTION PAGE*/
+.Menu{
+    display: grid;
+    background: url(background_website/aBG.jpg) no-repeat;
+    height: 100vh, auto; 
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.Menu h1{
+    max-width: 100%;
+    width: 250px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 42.5%;
+    margin-top: 90px;
+    color: white;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
+    border-radius: 5px;
+    padding: 10px;
+}
+.IMG_CONTAINER_MENU{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.IMG_CONTAINER_MENU img{
+    height: 50vh;
+    max-width: 100%;
+    width: 70%;
+    border-radius: 20px;
+}
+.IMAGE_1{
+    margin-top: 100px;
+    margin-left: 90px;
+}
+.IMAGE_2{
+    margin-top: 200px;
+    margin-left: 70px;
+}
+.IMAGE_3{
+    margin-top: 100px;
+    margin-left: 30px;
+}
+.img1 img,.img2 img,.img3 img{
+
+    animation: appear 5s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    transition: transform 0.5s ease;
+}
+
+.img1 img:hover,.img2 img:hover,.img3 img:hover{
+    transform: scale(1.1);
+}
+.h2DINNER_MENU{
+    color: white;
+    margin-left: 200px;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.button_DINNER_MENU{
+    padding: 10px;
+    width: 150px;
+    background: transparent;
+    color: orange;
+    border: none;
+    border: 1px solid white;
+    margin-left: 180px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+.button_DINNER_MENU:hover{
+    background-color: orange;
+    color: black;
+    transition: .4s;
+}
+
+.h2DESSERT_MENU{
+    font-size: 35px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 180px;
+}
+.button_DESSERT_MENU{
+    padding: 10px;
+    width: 150px;
+    background: transparent;
+    color: orange;
+    border: none;
+    border: 1px solid white;
+    margin-bottom: 100px;
+    margin-left: 167px;
+    cursor: pointer;
+}
+.button_DESSERT_MENU:hover{
+    background-color: orange;
+    color: black;
+    transition: .4s;
+}
+.h2DRINKS_MENU{
+    font-size: 35px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+.button_DRINKS_MENU{
+    padding: 10px;
+    width: 150px;
+    background: transparent;
+    color: orange;
+    border: none;
+    border: 1px solid white;
+    margin-left: 130px;
+    cursor: pointer;
+}
+.button_DRINKS_MENU:hover{
+    background-color: orange;
+    color: black;
+    transition: .4s;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateY(500px);
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        scale: 1;
+    }
+}
+@media(max-width: 1024px){
+    .IMG_CONTAINER_MENU{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width: 768px){
+    .IMG_CONTAINER_MENU{
+        grid-template-columns:  1fr;
+    }
+    
+}
+
+/*ABOUT US SECTION PAGE*/
+.ABOUT_US{
+    background-color: black;
+    height: 100vh, auto;
+    background-size: cover;
+    background-position: center;
+}
+.ABOUT_US img{
+    margin-top: -200px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+.h1ABOUT_US{
+    display: flex;
+    float: right;
+    color: white;
+    margin-right: 300px;
+    margin-top: 150px;
+    font-size: 30px;
+    color: orange;
+}
+.pABOUT_US{
+    color: white;
+    float: right;
+    margin-left: 60%;
+    margin-top: 100px;
+    font-size: 20px;
+    margin-right: 100px;
+}
+
+/*CONTACT US PAGE*/
+.LAST{
+    height: 70vh;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+}
+.container_1{
+    display: grid;
+    margin-left: 150px;
+    margin-top: 100px;
+    max-width: 100%;
+    width: 40%;
+    padding: 20px;
+    gap: 20px;
+}
+.container_1 > p{
+     color: black;
+}
+.p1_CU{
+    margin-top: -50px;
+}
+.p2_CU{
+    margin-top: -90px;
+}
+.p3_CU{
+    margin-top: -130px;
+}
+.h1_CU{
+    color: orange;
+}
+.h21_CU{
+    margin-top: -50px;
+}
+.h22_CU{
+    margin-top: -90px;
+}
+.container_2{
+    box-shadow: 10px 10px 15px rgb(62, 60, 60);
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    max-width: 100%;
+    width: 40%;
+    height: 60vh;
+    margin-left: 30px;
+    padding: 10px;
+    margin-top: 50px;
+}
+.container_2 > input{
+    height: 40%;
+    width: 70%;
+    font-size: 20px;
+    margin-left: 70px;
+}
+.h1_2CU{
+    text-align: center;
+    color: orange;
+    margin-top: 50px;
+}
+.CU_i1{
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgb(193, 193, 193);
+    outline: none;
+}
+.CU_i2{
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgb(193, 193, 193);
+    outline: none;
+}
+.CU_text1{
+    max-width: 100%;
+    width: 70%;
+    margin-left: 70px;
+    border: none;
+    border-bottom: 3px solid rgb(193, 193, 193);
+    outline: none;
+    font-size: 20px;
+}
+.CU_Submit{
+    max-width: 100%;
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    background-color: orange;
+    border-color: orange;
+    border-radius: 10px;
+    justify-self: center;
+    margin-top: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.CU_Submit:hover{
+    background-color: rgb(184, 120, 1);
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+           background:  url('bb/b.jpg')no-repeat center center fixed;
+            background-size: cover;
+            background-color: #e7c66c;
+            padding: 20px;
+        }
+
+        .menu-drinks {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 100%;
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+
+        }
+
+        .menu-drinks img {
+            max-width: 100%;
+            width: 100%;
+            height: 80%;
+        }
+
+        .menu-drinks h2 {
+            font-size: 24px;
+            color: #5A3915;
+            margin: 15px 0 10px;
+        }
+
+        .menu-drinks .price {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .menu-drinks .price span {
+            display: block;
+        }
+
+        .new-tag {
+            background-color: orange;
+            color: white;
+            padding: 5px 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .actions {
+            margin-top: 20px;
+        }
+
+        .actions button {
+            background-color: #ff6f00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .actions button:hover {
+            background-color: #e65c00;
+        }
+
+        .price {
+            color: #333;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-drinks">
+            <img src="drinks/BREW COFFEE.jpg" alt="Brewed coffee">
+            <h2>Brewed coffee</h2>
+            <div class="price">
+                <span>₱150</span>
+            </div>
+        </div>
+    
+        <div class="menu-drinks">
+            <img src="drinks/ICED TEA.jpg" alt="Iced Tea">
+            <h2>Iced Tea</h2>
+            <div class="price">
+                <span>₱100</span>
+            </div>       
+        </div>
+    
+        <div class="menu-drinks">
+            <img src="drinks/COLA.jpg" alt="Soda">
+            <h2>Soda</h2>
+            <div class="price">
+                <span>₱65</span>
+            </div>       
+        </div>
+    
+        <div class="menu-drinks">
+            <img src="drinks/TEA.jpg" alt="Tea">
+            <h2>Tea</h2>
+            <div class="price">
+                <span>₱55</span>
+            </div>       
+        </div>
+    
+        <div class="menu-drinks">
+            <img src="drinks/WATER.jpg" alt="Water">
+            <h2>Water</h2>
+            <div class="price">
+                <span>₱30</span>
+            </div>       
+        </div>
+
+        <div class="menu-drinks">
+            <img src="drinks/WINE.jpg" alt="Wine">
+            <h2>Wine</h2>
+            <div class="price">
+                <span>₱169</span>
+            </div>       
+        </div>
+
+    </div>
+   
+
+</body>
+</html>
